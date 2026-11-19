@@ -64,4 +64,10 @@ class Measurement
 
         return $this;
     }
+
+    public function getFahrenheit(): float
+    {
+        //rzut float bo gcels zwraca string, uzywam bo operujemy na matmie
+        return ((float) $this->getCelsius() * 9 / 5) + 32;
+    }
 }
